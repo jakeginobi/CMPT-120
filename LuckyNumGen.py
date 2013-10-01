@@ -69,6 +69,7 @@ def s2Calculations():
     elif len(s2) % 2 != 0:
         s2_final = s2 + "Odd"
 def randNum():
+    global randNum
     randNum = random.randint(0,9)   # This statement produces a random integer
 
 # Results and Tracing
