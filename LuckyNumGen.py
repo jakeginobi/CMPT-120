@@ -23,10 +23,10 @@ def initialInput():
 def addressCalculations():
     global d1
     addressPlace = userAddress.find(" ")                    # Finding the index of the address
-    addressNum = userAddress[0:(addressPlace + 1)]      # Slicing the number of the address
+    addressNum = userAddress[0:(addressPlace + 1)]          # Slicing the number of the address
     
     sqrtAddress = float(math.sqrt(float(addressNum)))       # Taking the root of the address
-    strSqrt = str(sqrtAddress)                             # Converting to a string             
+    strSqrt = str(sqrtAddress)                              # Converting to a string             
     decimalPos = strSqrt.find(".")                          # Indexing the answer of the root
     
     d1 = int(strSqrt[(decimalPos + 1):(decimalPos + 2)])    # Saving the number after the decimal
@@ -34,10 +34,10 @@ def addressCalculations():
 def d1Calculations():
     global d1_final
     global d1_mod
-    nameValue = userName[0].upper()                     # Converting the name into CAPS
+    nameValue = userName[0].upper()     # Converting the name into CAPS
     
-    if (nameValue < "M"):           # This if statement determines whether
-        d1_mod = d1 + -1         # the value d1 is changed by + or - 1
+    if (nameValue < "M"):               # This if statement determines whether
+        d1_mod = d1 + -1                # the value d1 is changed by + or - 1
     elif (nameValue >= "M"):
         d1_mod = d1 + 1
     
@@ -46,9 +46,9 @@ def d1Calculations():
     elif (d1_mod == 10):
         d1_round = 0
     
-    if 'd1_round' in locals():         # This if statement determines which value of d1
-        d1_final = d1_round         # (either d1_mod or d1_round) is to be used for
-    else:                           # the final answer (If d1_round exists, it will be used)
+    if 'd1_round' in locals():          # This if statement determines which value of d1
+        d1_final = d1_round             # (either d1_mod or d1_round) is to be used for
+    else:                               # the final answer (If d1_round exists, it will be used)
         d1_final = d1_mod
 def s2Calculations():
     global s2
@@ -57,14 +57,14 @@ def s2Calculations():
                                                                      
     stars = "*" * d1_final              # Creates the appropriate number of stars for s2
     
-    nameLetters = userName[0:2].lower()     # Slices the first two letters of the users name for s2
+    nameLetters = userName[0:2].lower() # Slices the first two letters of the users name for s2
     
-    if userCode.isalpha() == True:  #This if statement determines whether s2 should include one or both of the characters in the special character code
+    if userCode.isalpha() == True:      #This if statement determines whether s2 should include one or both of the characters in the special character code
         s2 = streetLetter + stars + nameLetters + userCode
     elif userCode.isalpha() == False:
         s2 = streetLetter + stars + nameLetters + userCode[0:1]
     
-    if len(s2) % 2 == 0:        # This if statement determines whether to add Even or Odd to s2
+    if len(s2) % 2 == 0:            # This if statement determines whether to add Even or Odd to s2
         s2_final = s2 + "Even"
     elif len(s2) % 2 != 0:
         s2_final = s2 + "Odd"
