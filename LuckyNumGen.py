@@ -1,5 +1,5 @@
 #########Lucky Number Generator by Alex Land and Evan Chisholm############
-############September 27 2013, worked on for 1.25 hours ###############
+############September 30 2013, worked on for 1.5 hours total ############
 
 import math
 import random
@@ -33,9 +33,9 @@ if (nameValue < "M"):           # This if statement determines whether
 elif (nameValue >= "M"):
     d1_mod = d1 + 1
 
-if (d1 == -1):                  # This if statement round the number to 0 or 9
+if (d1_mod == -1):                  # This if statement round the number to 0 or 9
     d1_round = 9
-elif (d1 == 10):
+elif (d1_mod == 10):
     d1_round = 0
 
 if 'd1_round' in globals():         # This if statement determines which value of d1
@@ -47,7 +47,7 @@ streetLetter = userAddress[(len(userAddress) - 1):(len(userAddress))] # Slices t
                                                                  
 stars = "*" * d1_final              # Creates the appropriate number of stars for s2
 
-nameLetters = userName[0:2]     # Slices the first two letters of the users name for s2
+nameLetters = userName[0:2].lower()     # Slices the first two letters of the users name for s2
 
 if userCode.isalpha() == True:  #This if statement determines whether s2 should include one or both of the characters in the special character code
     s2 = streetLetter + stars + nameLetters + userCode
