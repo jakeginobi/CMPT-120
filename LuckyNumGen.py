@@ -15,8 +15,8 @@ userName = raw_input("Enter your name (First then Last): ")
 userAddress = raw_input("Enter your address: ")
 userCode = raw_input("Enter your two digit character code: ")
 
-#addressPlace = userAddress.find(" ")
-addressNum = userAddress[0:(userAddress.find(" ") + 1)]
+addressPlace = userAddress.find(" ")
+addressNum = userAddress[0:(addressPlace + 1)]
 
 # Calculations
 
@@ -36,9 +36,36 @@ if (d1 == -1):
     d1 = 9
 elif (d1 == 10):
     d1 = 0
+'''
+streetName = userAddress[(addressPlace + 1):50]
+streetPlace = streetName.find(" ")
+streetLetter = streetName[(streetPlace - 1):streetPlace]
+'''
+streetLetter = userAddress[(len(userAddress) - 1):(len(userAddress))]
 
-print d1
+stars = "*" * d1
 
-s2 = str(userAddress[len(userAddress)]
+nameLetters = userName[0:2]
 
-print s2
+if userCode.isalpha() == True:
+    s2 = streetLetter + stars + nameLetters + userCode
+elif userCode.isalpha() == False:
+    s2 = streetLetter + stars + nameLetters + userCode[0:1]
+
+if len(s2) % 2 == 0:
+    s2 += "Even"
+elif len(s2) % 2 != 0:
+    s2 += "Odd"
+
+randNum = random.randint(0,9)
+
+# Results
+print "These are your results: "
+print " "
+print "Your lucky digit (d1) is", d1
+print "Your code is", s2
+print "A random digit is", randNum
+
+
+
+
