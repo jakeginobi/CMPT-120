@@ -1,5 +1,5 @@
 #########Lucky Number Generator by Alex Land and Evan Chisholm############
-############September 30 2013, worked on for 1.5 hours total ############
+############September 30 2013, worked on for 1 hour each #################
 
 import math
 import random
