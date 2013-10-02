@@ -1,0 +1,3 @@
+Alex Land: s2 Calculations, Comments, Tracing
+Evan Chisholm: d1Calculations, function definitions and calling
+random module: random.randint
