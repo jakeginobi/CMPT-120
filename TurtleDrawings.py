@@ -6,10 +6,7 @@ t3 = t.Turtle()
 t4 = t.Turtle()
 
 # Functions
-'''
-def rgbinput():
-    rgbin = raw_input("Do you want to input colors via RGB codes? (Type Yes or No): ")
-'''
+
 def colinput():
     col1 = raw_input("Type the first colour you would like: ")
     col2 = raw_input("Type the second colour you would like: ")
