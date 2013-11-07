@@ -1,8 +1,6 @@
-ret = ""
-n = 5
-if n > 0:
-        for i in range (n, 0, -2):
-                print i
-                ret += str(i) + ".."
+string = "I can fly!"
+ch = "fly"
+if (ch in string) == True:
+	print string.replace(ch, "xxx")
 
-print ret + "!!"
+print string
